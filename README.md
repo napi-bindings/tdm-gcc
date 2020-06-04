@@ -6,6 +6,9 @@ This distrubution is internally used for some **napi-bindings** projects.
 
 ## Version 9.2.0
 
+![GitHub All Releases](https://img.shields.io/github/downloads/jmeubank/tdm-gcc/total?color=%2309ABF6&label=installer%20downloads)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/jmeubank/tdm-gcc)
+
 ## COPYING ##
 
 To the extent possible under law, the author(s) have dedicated all copyright and
