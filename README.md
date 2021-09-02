@@ -4,7 +4,7 @@ This repository contains an unofficial binary distribution for **[TDM-GCC](https
 
 This distrubution is internally used for some **napi-bindings** projects.
 
-## Version 9.2.0
+## Version 10.3.0
 
 ![GitHub All Releases](https://img.shields.io/github/downloads/jmeubank/tdm-gcc/total?color=%2309ABF6&label=installer%20downloads)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/jmeubank/tdm-gcc)
@@ -60,10 +60,9 @@ the following packages:
      (https://github.com/jmeubank/tdm-binutils-gdb/tree/tdm-patches-gdb.public)
      and expat sources and a Python 32-bit or 64-bit binary distribution
 
-
 ## BUILD NOTES ##
 
-The 9.2.0 TDM32 and TDM64 GCC binaries were built as native bootstraps in
+The 10.3.0 TDM32 and TDM64 GCC binaries were built as native bootstraps in
 Windows 10 (64-bit), using previously built toolchains with the same set of
 patches, under the [MSYS2](https://www.msys2.org/) environment. The build
 scripts in this package will probably not work in Cygwin, WSL, or GNU/Linux

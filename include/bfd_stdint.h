@@ -1,4 +1,4 @@
-/* generated for  gcc.exe (tdm64-1) 9.2.0 */
+/* generated for  gcc.exe (GCC) 10.3.0 */
 
 #ifndef GCC_GENERATED_STDINT_H
 #define GCC_GENERATED_STDINT_H 1

@@ -68,7 +68,6 @@
 #include <limits.h>
 #include <signal.h>
 
-#include <unistd.h>
 #include <sys/timeb.h>
 
 #include "pthread_compat.h"
@@ -160,7 +159,8 @@ extern "C" {
 #define PTHREAD_MUTEX_RECURSIVE_NP	PTHREAD_MUTEX_RECURSIVE
 
 void * WINPTHREAD_API pthread_timechange_handler_np(void * dummy);
-/* int    WINPTHREAD_API pthread_delay_np (const struct timespec *interval); */
+struct timespec;
+int    WINPTHREAD_API pthread_delay_np (const struct timespec *interval);
 int    WINPTHREAD_API pthread_num_processors_np(void);
 int    WINPTHREAD_API pthread_set_num_processors_np(int n);
 
@@ -233,7 +233,7 @@ struct itimerspec {
   struct timespec  it_interval;  /* Timer period */
   struct timespec  it_value;     /* Timer expiration */
 };
-#endif /* ! defined _TIMESPEC_DEFINED */
+#endif
 
 #ifndef SCHED_OTHER
 /* Some POSIX realtime extensions, mostly stubbed */
@@ -396,6 +396,11 @@ int WINPTHREAD_API pthread_condattr_setpshared(pthread_condattr_t *a, int s);
 typedef int __winpthreads_clockid_t;
 #define ____winpthreads_clockid_t_defined 1
 #endif  /* ____winpthreads_clockid_t_defined */
+
+#if defined(__MINGW64__) && !defined(__clockid_t_defined)
+typedef int clockid_t;
+#define __clockid_t_defined 1
+#endif
 
 int WINPTHREAD_API pthread_condattr_getclock (const pthread_condattr_t *attr,
        __winpthreads_clockid_t *clock_id);
